@@ -43,8 +43,8 @@ export default class Chatbox extends React.Component{
         }
         <Paper style={style} zDepth={5}>
           <Paper style={style2} zDepth={1} />
-          <TextField style={style3} hintText="Hint Text" floatingLabelText="Floating Label Text" />
-          <RaisedButton label="Envoyer" secondary={true} style={style4} />
+          <TextField style={style3} hintText="Tell the Game Master !" floatingLabelText="What will you do next ?" />
+          <RaisedButton label="Send" secondary={true} style={style4} />
         </Paper>
       </div>
     )
