@@ -1,6 +1,8 @@
-let nextTodoId = 0
-export const addTodo = text => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  text
+let nextMessageId = 0
+
+export const addMessage = (text, owner) => ({
+  type: 'ADD_MESSAGE',
+  id: nextMessageId++,
+  text,
+  owner
 })

@@ -1,13 +1,14 @@
-@import 'components/all';
+@import 'container/all';
 
 *
 {
   font-size: 1em;
-  font-family: Arial !important;
+  font-family: Roboto !important;
 }
 
 html, body, .app, #root, [data-reactroot] {
   height: 100%;
+  color: orange;
 }
 
 .chatbox-container {

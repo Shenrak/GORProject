@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-import './scss/main.scss'
-import Chatbox from './components/Chatbox'
+import './styles/main.scss'
+import Chatbox from './ui/components/Chatbox'
 
 class App extends Component {
   render() {

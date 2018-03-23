@@ -1,20 +1,20 @@
 const todos = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case 'ADD_MESSAGE':
       return [
         ...state,
         {
           id: action.id,
           text: action.text,
-          completed: false
+          owner: action.owner
         }
       ]
-    case 'TOGGLE_TODO':
-      return state.map(todo =>
-        (todo.id === action.id)
-          ? {...todo, completed: !todo.completed}
-          : todo
-      )
+    // case 'REMOVE_MESSAGE':
+    //   return state.map(todo =>
+    //     (todo.id === action.id)
+    //       ? {...todo, completed: !todo.completed}
+    //       : todo
+    //   )
     default:
       return state
   }
