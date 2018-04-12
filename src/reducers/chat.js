@@ -1,6 +1,6 @@
 const todos = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_MESSAGE':
+    case "ADD_MESSAGE":
       return [
         ...state,
         {
@@ -9,15 +9,8 @@ const todos = (state = [], action) => {
           owner: action.owner
         }
       ]
-    // case 'REMOVE_MESSAGE':
-    //   return state.map(todo =>
-    //     (todo.id === action.id)
-    //       ? {...todo, completed: !todo.completed}
-    //       : todo
-    //   )
     default:
       return state
   }
 }
- 
 export default todos
