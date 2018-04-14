@@ -1,16 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"
 
-import './styles/main.scss'
-import Chatbox from './ui/containers/chatbox-container'
+import "./styles/main.css"
+import Chatbox from "./ui/containers/chatbox-container"
+import Character from "./ui/containers/character-container"
 
 class App extends Component {
   render() {
     return (
-        <MuiThemeProvider>
-          <Chatbox/>
-        </MuiThemeProvider>
+      <MuiThemeProvider>
+        <h1>GOR Project</h1>
+        <div className="game">
+          <Chatbox />
+          <Character />
+        </div>
+      </MuiThemeProvider>
     )
   }
 }

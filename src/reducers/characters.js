@@ -5,11 +5,16 @@ const todos = (
       name: "Jahan",
       level: 1,
       hitPoints: 45,
-      stuff: {
-        helmet: "none",
-        pants: "none",
-        ring: "The One"
-      }
+      stuff: [
+        {
+          name: "Leather helmet",
+          armor: "12",
+        },
+        {
+          name: "Pants",
+          armor: "0"
+        }
+      ]
     }
   ],
   action

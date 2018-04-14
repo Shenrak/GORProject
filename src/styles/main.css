@@ -1,0 +1,56 @@
+.chatbox-container {
+  height: 600px;
+  width: 500px;
+  text-align: left;
+  display: inline-block; }
+
+.chatbox {
+  height: "80%";
+  width: "95%";
+  margin-top: "2.5%";
+  margin-left: "2.5%";
+  margin-right: "2.5%";
+  text-align: 'center';
+  display: 'inline-block'; }
+
+.chatbox-textfield {
+  margin-top: "2%";
+  width: "70%";
+  margin-left: "4%"; }
+
+.chatbox-button {
+  margin-left: "4.5%";
+  width: 150; }
+
+.character {
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  position: relative; }
+
+.character-stats {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  display: flex;
+  justify-content: space-around; }
+
+* {
+  font-size: 1em;
+  font-family: Roboto !important; }
+
+html, body, .app, #root, [data-reactroot] {
+  height: 100%;
+  background-color: #00b56f;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center; }
+
+.game {
+  display: flex;
+  justify-content: space-around; }
+
+h1 {
+  color: ghostwhite;
+  font-size: 4em; }
