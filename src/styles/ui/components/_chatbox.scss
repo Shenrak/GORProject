@@ -1,27 +1,36 @@
+@import "../../vars";
+
 .chatbox-container {
-    height: 600px;
-    width: 500px;
-    text-align: left;
-    display: inline-block;
-  }
+  height: 600px;
+  width: 500px;
+  text-align: left;
+  display: inline-block;
+  background-color: white;
+}
 
-  .chatbox {
-    height: "80%";
-    width: "95%";
-    margin-top: "2.5%";
-    margin-left: "2.5%";
-    margin-right: "2.5%";
-    text-align: 'center';
-    display: 'inline-block';
-  }
+.chatbox {
+  height: 80%;
+  width: 95%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  text-align: "center";
+  display: "inline-block";
+}
 
-  .chatbox-textfield {
-    margin-top: "2%";
-    width: "70%";
-    margin-left: "4%";
-  }
+.chatbox-textfield {
+  margin-bottom: 2%;
+  width: 100%;
+}
 
-  .chatbox-button {
-    margin-left: "4.5%";
-    width: 150;
-  }
+.chatbox-button {
+  margin-left: 4.5%;
+  width: 150;
+  display: none !important;
+}
+
+.message {
+  padding: 0.5em !important;
+  background-color: $bg-color !important;
+  color: white !important;
+}

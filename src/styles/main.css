@@ -2,25 +2,31 @@
   height: 600px;
   width: 500px;
   text-align: left;
-  display: inline-block; }
+  display: inline-block;
+  background-color: white; }
 
 .chatbox {
-  height: "80%";
-  width: "95%";
-  margin-top: "2.5%";
-  margin-left: "2.5%";
-  margin-right: "2.5%";
-  text-align: 'center';
-  display: 'inline-block'; }
+  height: 80%;
+  width: 95%;
+  margin-top: 2.5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  text-align: "center";
+  display: "inline-block"; }
 
 .chatbox-textfield {
-  margin-top: "2%";
-  width: "70%";
-  margin-left: "4%"; }
+  margin-bottom: 2%;
+  width: 100%; }
 
 .chatbox-button {
-  margin-left: "4.5%";
-  width: 150; }
+  margin-left: 4.5%;
+  width: 150;
+  display: none !important; }
+
+.message {
+  padding: 0.5em !important;
+  background-color: #00b56f !important;
+  color: white !important; }
 
 .character {
   background-color: white;

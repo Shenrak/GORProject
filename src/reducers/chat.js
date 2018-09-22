@@ -1,4 +1,6 @@
-const todos = (state = [], action) => {
+import { combineReducers } from "redux"
+
+const messages = (state = [], action) => {
   switch (action.type) {
     case "ADD_MESSAGE":
       return [
@@ -13,4 +15,4 @@ const todos = (state = [], action) => {
       return state
   }
 }
-export default todos
+export default combineReducers({ messages })
