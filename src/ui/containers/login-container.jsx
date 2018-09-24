@@ -1,19 +1,18 @@
 import { connect } from "react-redux"
-import Chatbox from "../views/chatbox-view"
+import Login from "../views/login-view"
 
-import {addMessage} from "../../actions"
+import { login, register } from "../../actions"
 
 const mapStateToProps = state => ({
   connected: state.context.connected,
-  messages: state.chat.messages,
-  token: state.context.token,
-  login: state.context.login
+  token: state.context.token
 })
 const mapDispatchToProps = {
-  addMessage
+  login,
+  register
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Chatbox)
+)(Login)

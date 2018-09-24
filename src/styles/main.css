@@ -23,11 +23,6 @@
   width: 150;
   display: none !important; }
 
-.message {
-  padding: 0.5em !important;
-  background-color: #00b56f !important;
-  color: white !important; }
-
 .character {
   background-color: white;
   width: 600px;
@@ -41,6 +36,31 @@
   display: flex;
   justify-content: space-around; }
 
+.login-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+  background-color: #00b9688c; }
+
+.login-container {
+  height: 175px;
+  width: 30%; }
+
+.input-login {
+  width: 200px; }
+
+.input-login-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  align-items: center; }
+
 * {
   font-size: 1em;
   font-family: Roboto !important; }
@@ -48,8 +68,8 @@
 html, body, .app, #root, [data-reactroot] {
   height: 100%;
   background-color: #00b56f;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   position: relative;
   text-align: center; }
 

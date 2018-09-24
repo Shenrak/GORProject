@@ -10,8 +10,8 @@
 html, body, .app, #root, [data-reactroot] {
   height: 100%;
   background-color: $bg-color;
-  margin:0;
-  padding:0;
+  margin:0 !important;
+  padding:0 !important;
   position: relative;
   text-align: center;
 }

@@ -1,0 +1,6 @@
+export const ADD_MESSAGE = "ADD_MESSAGE"
+export const ADD_STUFF = "ADD_STUFF"
+export const CONNECT = "CONNECT"
+export const START_LOADING = "START_LOADING"
+export const STOP_LOADING = "STOP_LOADING"
+export const ADD_CHARACTERS = "ADD_CHARACTERS"
