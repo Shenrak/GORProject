@@ -8,6 +8,11 @@
   background-color: white;
 }
 
+.messages-container {
+  overflow: auto;
+  height: 91%;
+}
+
 .chatbox {
   height: 80%;
   width: 95%;

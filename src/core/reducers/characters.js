@@ -1,36 +1,27 @@
 import * as actionTypes from "../actions/types"
 
 const characters = (
-  state = [],
+  state = {},
   action
 ) => {
   switch (action.type) {
     case actionTypes.ADD_CHARACTERS:
-      return action.characters
+      return action.characters.entities.characters
     default:
       return state
   }
 }
 
-const uuids = (state = {}, action) => {
-
-}
-
-const areMine = (state = {}, action) => {
-
-}
-
-const stats = (state = {}, action) => {
-
-}
-
-const names = (state = {}, action) => {
-
-}
-
 const ids = (state = [], action) => {
-
+  switch (action.type) {
+    case actionTypes.ADD_CHARACTERS:
+      return action.characters.result
+    default:
+      return state
+  }
 }
+
+
 
 export default characters
 

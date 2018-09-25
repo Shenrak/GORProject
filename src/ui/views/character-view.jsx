@@ -1,26 +1,28 @@
 import React from "react"
-import Paper from "material-ui/Paper"
-import { GridList, GridTile } from "material-ui/GridList"
-import Subheader from "material-ui/Subheader"
+import { Segment, Grid } from "semantic-ui-react"
 
 const Character = props => (
   <div className="character">
-    <Paper className="character-stats" zDepth={5}>
-      <p>Name: {props.name}</p>
-      <p>Level: {props.level}</p>
-      <p>Life: {props.hitPoints} HP</p>
-    </Paper>
+    {Object.keys(props.characters).map(i => (
+      <div>
+        <Segment className="character-stats" zDepth={5}>
+          {Object.keys(props.characters[i].stats).map(u => (
+            <p>{u + " : " + props.characters[i].stats[u]}</p>
+          ))}
+        </Segment>
 
-    <GridList cellHeight={180} className="character-stuff">
-      <Subheader>Stuff</Subheader>
-      {props.stuff.map(tile => (
-        <GridTile
-          key={tile.name}
-          title={tile.name}
-          subtitle={"armor : " + tile.armor}
-        />
-      ))}
-    </GridList>
+        <Grid className="character-stuff">
+          <h2>Items</h2>
+          {props.characters[i].items.map(tile =>
+            Object.keys(tile).map(u =>
+              Object.keys(tile[u].stats).map(o => (
+                <p>{o + " : " + tile[u].stats[o]}</p>
+              ))
+            )
+          )}
+        </Grid>
+      </div>
+    ))}
   </div>
 )
 

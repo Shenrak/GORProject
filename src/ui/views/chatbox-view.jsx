@@ -63,6 +63,13 @@ class Chatbox extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <Segment className="chatbox-container" raised>
+          <Input
+            className="chatbox-textfield"
+            placeholder="What will you do next ?"
+            value={this.state.message}
+            onChange={this.handleInputMessage.bind(this)}
+            disabled={!this.state.socketOpened}
+          />
           <Segment
             className="message"
             color="red"
@@ -72,20 +79,15 @@ class Chatbox extends React.Component {
           >
             Connection failed -- Click here to reconnect
           </Segment>
-          <Input
-            className="chatbox-textfield"
-            placeholder="What will you do next ?"
-            value={this.state.message}
-            onChange={this.handleInputMessage.bind(this)}
-            disabled={!this.state.socketOpened}
-          />
-          {this.props.messages.map(message => (
-            <Message
-              key={message.id}
-              {...message}
-              colored={this.props.login !== message.owner}
-            />
-          ))}
+          <div className="messages-container">
+            {this.props.messages.slice(0).reverse().map(message => (
+              <Message
+                key={message.id}
+                {...message}
+                colored={this.props.login !== message.owner}
+              />
+            ))}
+          </div>
           <Button className="chatbox-button" label="Send" secondary={true} />
         </Segment>
       </form>

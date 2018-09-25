@@ -1,3 +1,6 @@
+import { normalize } from "normalizr"
+import * as schemas from "../schemas"
+
 import { $signIn } from "../requests"
 import * as actionTypes from "./types"
 import { startLoading, stopLoading } from "./loading"
@@ -21,7 +24,7 @@ export const login = form => dispatch => {
           token: result.token,
           login: result.data.login
         })
-        dispatch(saveCharacters(result.data.characters))
+        dispatch(saveCharacters(normalize(result.data.characters, schemas.characters)))
       }
     })
     .finally(dispatch(stopLoading()))
