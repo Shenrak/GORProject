@@ -61,17 +61,49 @@
   width: 100%;
   align-items: center; }
 
+.loadingDiv {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff6e;
+  position: absolute;
+  margin: 0%;
+  z-index: 4; }
+
+.loadingMessage {
+  padding-top: 75px;
+  font-weight: bolder;
+  font-size: larger; }
+
+.loading {
+  position: relative;
+  transform: inherit !important;
+  top: auto !important;
+  left: auto !important; }
+
 * {
   font-size: 1em;
   font-family: Roboto !important; }
 
-html, body, .app, #root, [data-reactroot] {
-  height: 100%;
-  background-color: #00b56f;
+html,
+body,
+.app,
+#root,
+[data-reactroot] {
+  top: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  position: relative;
-  text-align: center; }
+  text-align: center !important;
+  background-color: #00b56f !important; }
 
 .game {
   display: flex;

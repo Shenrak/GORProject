@@ -1,4 +1,4 @@
-import { transform } from "../utils/http-res-handler"
+import { transform } from "../../utils/http-res-handler"
 
 const $myFetch = (path, options = {}) => {
   const route = "http://localhost:4000/api" + path

@@ -1,7 +1,7 @@
 import { connect } from "react-redux"
 import Login from "../views/login-view"
 
-import { login, register } from "../../actions"
+import { login, register } from "../../core/actions"
 
 const mapStateToProps = state => ({
   connected: state.context.connected,

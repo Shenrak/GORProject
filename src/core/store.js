@@ -3,8 +3,8 @@ import logger from "redux-logger"
 import thunk from "redux-thunk"
 import promise from "redux-promise-middleware"
 
-import { loadState, saveState } from "./utils/localStorage"
-import { router } from "./utils/router"
+import { loadState, saveState } from "../utils/localStorage"
+import { router } from "../utils/router"
 import rootReducer from "./reducers"
 
 const configureStore = () => {

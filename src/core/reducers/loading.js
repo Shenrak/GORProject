@@ -1,4 +1,4 @@
-import { vocabulary } from "../utils"
+import { vocabulary } from "../../utils"
 import { combineReducers } from "redux"
 import * as actionTypes from "../actions/types"
 

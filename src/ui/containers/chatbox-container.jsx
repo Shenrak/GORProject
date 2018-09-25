@@ -1,7 +1,7 @@
 import { connect } from "react-redux"
 import Chatbox from "../views/chatbox-view"
 
-import {addMessage} from "../../actions"
+import {addMessage} from "../../core/actions"
 
 const mapStateToProps = state => ({
   connected: state.context.connected,

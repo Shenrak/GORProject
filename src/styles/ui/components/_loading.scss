@@ -1,0 +1,29 @@
+
+.loadingDiv {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff6e;
+  position: absolute;
+  margin: 0%;
+  z-index: 4;
+}
+
+.loadingMessage {
+  padding-top: 75px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.loading {
+  position: relative;
+  transform: inherit !important;
+  top: auto !important;
+  left: auto !important;
+}
