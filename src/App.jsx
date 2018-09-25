@@ -18,6 +18,7 @@ class App extends Component {
         <h1>GOR Project</h1>
         <div className="game">
           {this.props.connected ? <Chatbox /> : ""}
+          {this.props.connected ? <Character /> : ""}
           {/* <Character />  */}
         </div>
       </div>

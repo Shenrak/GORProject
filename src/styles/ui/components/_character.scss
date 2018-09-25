@@ -1,14 +1,28 @@
 .character{
-  background-color: rgb(255, 255, 255);
-  width: 600px;
-  height: 600px;
   position: relative;
 }
 
-.character-stats{
-  position: absolute;
-  top: 0;
-  width: inherit;
-  display: flex;
-  justify-content: space-around;
+.characters{
+  padding: 1em;
+  position: relative;
+  height: 600px;
+  width: 500px;
+  overflow: auto;
+  background-color: white;
+}
+
+.character-stuff{
+  position: relative;
+}
+
+.stats-segment{
+  position: relative;
+}
+
+.stats-header{
+  position: relative;
+}
+
+.item-header{
+  position: relative;
 }
