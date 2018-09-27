@@ -1,40 +1,40 @@
 import React from "react"
-import { Segment, Grid } from "semantic-ui-react"
+import { Segment, List, Popup, Label } from "semantic-ui-react"
 
 const Character = props => (
   <Segment raised className="characters">
     {Object.keys(props.characters).map(i => (
-      <Segment raised className="character">
+      <div raised className="character">
         <h2 className="character-header">{props.characters[i].name}</h2>
-        {renderStats(props.characters[i].stats)}
+        <div className="character-attributes">
+          <Segment className="character-stats">
+            {renderStats(props.characters[i].stats)}
+          </Segment>
 
-        <h2>Items</h2>
-        {props.characters[i].items.map(item => (
-          <Grid className="character-stuff">
-            <Grid.Column>
-              <Segment>
-                <h2 className="item-header">{item.name}</h2>
-                {renderStats(item.stats)}
-              </Segment>
-            </Grid.Column>
-          </Grid>
-        ))}
-      </Segment>
+          <Segment className="character-stuff">
+            <h2>Items</h2>
+            <List
+              items={props.characters[i].items.map(item => (
+                // item.name
+                <Popup
+                  key={item.name}
+                  trigger={<Label className="item-label">{item.name}</Label>}
+                  content={renderStats(item.stats)}
+                />
+              ))}
+            />
+          </Segment>
+        </div>
+      </div>
     ))}
   </Segment>
 )
 
 const renderStats = stats => (
-  <Segment className="stats-segment">
+  <div className="stats-segment">
     <h2 className="stats-header">Stats</h2>
-    <Grid columns={2}>
-      {stats.map(stat => (
-        <Grid.Column>
-          <Segment>{stat.name + " : " + stat.value}</Segment>
-        </Grid.Column>
-      ))}
-    </Grid>
-  </Segment>
+    <List items={stats.map(stat => stat.name + " : " + stat.value)} />
+  </div>
 )
 
 export default Character

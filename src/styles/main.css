@@ -38,17 +38,34 @@
   overflow: auto;
   background-color: white; }
 
-.character-stuff {
-  position: relative; }
+.character-attributes {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em; }
 
-.stats-segment {
-  position: relative; }
+.character-stuff {
+  width: 45%;
+  margin: 0 !important;
+  background-color: #23223b !important;
+  color: white; }
+
+.character-stats {
+  width: 45%;
+  margin: 0 !important;
+  background-color: #482188 !important;
+  color: white; }
 
 .stats-header {
   position: relative; }
 
 .item-header {
   position: relative; }
+
+.item-label {
+  margin: 0 !important;
+  margin-top: 0.5em !important;
+  color: white !important;
+  background-color: #ffffff00 !important; }
 
 .login-background {
   position: fixed;
@@ -115,7 +132,6 @@ body,
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  text-align: center !important;
   background-color: #23223b !important; }
 
 .game {
@@ -124,7 +140,8 @@ body,
 
 h1 {
   color: ghostwhite;
-  font-size: 4em; }
+  font-size: 4em;
+  text-align: center; }
 
 *::-webkit-scrollbar {
   width: 0.5em !important;

@@ -1,8 +1,8 @@
-.character{
+.character {
   position: relative;
 }
 
-.characters{
+.characters {
   padding: 1em;
   position: relative;
   height: 600px;
@@ -11,18 +11,37 @@
   background-color: white;
 }
 
-.character-stuff{
+.character-attributes {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+.character-stuff {
+  width: 45%;
+  margin: 0 !important;
+  background-color: $bg-color !important;
+  color: white;
+}
+
+.character-stats {
+  width: 45%;
+  margin: 0 !important;
+  background-color: #482188 !important;
+  color: white;
+}
+
+.stats-header {
   position: relative;
 }
 
-.stats-segment{
+.item-header {
   position: relative;
 }
 
-.stats-header{
-  position: relative;
-}
-
-.item-header{
-  position: relative;
+.item-label {
+  margin: 0 !important;
+  margin-top: 0.5em !important;
+  color: white !important;
+  background-color: #ffffff00 !important;
 }
