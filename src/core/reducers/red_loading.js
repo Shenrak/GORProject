@@ -1,6 +1,6 @@
 import { vocabulary } from "../../utils"
 import { combineReducers } from "redux"
-import * as actionTypes from "../actions/types"
+import * as actionTypes from "../actions/act_types"
 
 const isLoading = (state = false, action) => {
   switch (action.type) {

@@ -2,7 +2,7 @@ import React from "react"
 import { Input, Button, Segment } from "semantic-ui-react"
 import { Socket } from "phoenix"
 
-import Message from "../components/message-view"
+import Message from "../components/com_message"
 
 class Chatbox extends React.Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class Chatbox extends React.Component {
   }
 
   connect() {
+    // const socket = new Socket("ws://172.30.37.172:4000/socket", {
     const socket = new Socket("ws://localhost:4000/socket", {
       params: { token: this.props.token, login: this.props.login }
     })

@@ -1,10 +1,11 @@
 import { combineReducers } from "redux"
 import { routerReducer } from "react-router-redux"
 import { reducer as toastrReducer } from "react-redux-toastr"
-import chat from "./chat"
-import characters from "./characters"
-import context from "./context"
-import loading from "./loading"
+import chat from "./red_chat"
+import characters from "./red_characters"
+import context from "./red_context"
+import loading from "./red_loading"
+import rooms from "./red_rooms"
 
 export default combineReducers({
   characters,
@@ -12,7 +13,8 @@ export default combineReducers({
   context,
   router: routerReducer,
   toastr: toastrReducer,
-  loading
+  loading,
+  rooms
 })
 
 export const getToken = state => state.context.token

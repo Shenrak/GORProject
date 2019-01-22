@@ -1,9 +1,9 @@
 import { normalize } from "normalizr"
 import * as schemas from "../schemas"
 
-import { $signIn } from "../requests"
-import * as actionTypes from "./types"
-import { startLoading, stopLoading } from "./loading"
+import { $signIn, $getRooms } from "../requests"
+import * as actionTypes from "./act_types"
+import { startLoading, stopLoading } from "./act_loading"
 
 let nextMessageId = 0
 
@@ -30,9 +30,25 @@ export const login = form => dispatch => {
     .finally(dispatch(stopLoading()))
 }
 
+export const getRooms = token => dispatch => {
+  dispatch(startLoading())
+  $getRooms(token)
+    .then(result => {
+      if (result) {
+        dispatch(saveRooms(result.data))
+      }
+    })
+    .finally(dispatch(stopLoading()))
+}
+
 export const saveCharacters = characters => ({
   type: actionTypes.ADD_CHARACTERS,
   characters
+})
+
+export const saveRooms = rooms => ({
+  type: actionTypes.FETCH_ROOMS,
+  rooms
 })
 
 export const register = (text, owner) => ({

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux"
-import * as actionTypes from "../actions/types"
+import * as actionTypes from "../actions/act_types"
 
 const messages = (state = [], action) => {
   switch (action.type) {

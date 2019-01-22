@@ -2,7 +2,7 @@ import * as React from "react"
 import { connect } from "react-redux"
 
 import ReduxToastr from "react-redux-toastr"
-import Loader from "./loader"
+import Loader from "./com_loader"
 
 const Overlay = ({ loading }) => (
   <div>

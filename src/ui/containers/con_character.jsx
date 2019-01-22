@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Character from '../views/character-view'
+import Character from '../views/viw_character'
  
 const mapStateToProps = state => ({
   characters: state.characters
