@@ -6,7 +6,7 @@ import { ActionTypes } from "../actions/act_types"
 import { startLoading, stopLoading } from "./act_loading"
 
 export * from "./act_loading"
-export * from "./act_tree"
+export * from "./act_rooms"
 export * from "./act_types"
 
 let nextMessageId = 0

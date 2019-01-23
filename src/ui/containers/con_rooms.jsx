@@ -4,8 +4,9 @@ import Rooms from "../views/viw_rooms"
 import { getRoomsTree } from "../../core/actions"
 
 const mapStateToProps = state => ({
-  data: state.rooms,
+  data: state.rooms.roomsTree,
   token: state.context.token,
+  currentRoom: state.rooms.currentRoom,
 })
 const mapDispatchToProps = {
   getRoomsTree

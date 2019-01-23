@@ -13,7 +13,7 @@ class Rooms extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getRoomsTree(this.props.token)
+    this.props.getRoomsTree()
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -39,15 +39,14 @@ class Rooms extends React.Component {
   render() {
     return (
       <Segment className="rooms" raised>
-      {/* <Message>
-        <Message.Header>
-          You are currently in {this.props.currentRoom.name}. This room is {this.props.currentRoom.public ? " public." : " private."}
-        </Message.Header>
-        <Message.Content>
-          Feel free to move to another room !
-        </Message.Content>
-      </Message> */}
-        <Tree data={this.props.data} onToggle={this.handleClick}/>
+        <Message>
+          <Message.Header>
+            You are currently in {this.props.currentRoom.name}. This room is{" "}
+            {this.props.currentRoom.public ? " public." : " private."}
+          </Message.Header>
+          <Message.Content>Feel free to move to another room !</Message.Content>
+        </Message>
+        <Tree data={this.props.data} onToggle={this.handleClick} />
       </Segment>
     )
   }

@@ -2,15 +2,33 @@ import { ActionTypes } from "."
 import { startLoading, stopLoading } from "./act_loading"
 import { data } from "../../utils/tree"
 import { $fetchRooms } from "../requests"
+import { getToken } from "../reducers"
 
-export const getRoomsTree = token => dispatch => {
+export const getRoomsTree = () => (dispatch, getState) => {
   dispatch(startLoading())
+  const token = getToken(getState())
   $fetchRooms(token)
     .then(result => {
       if (result) {
         dispatch({
           type: ActionTypes.FETCH_ROOMS,
-          rooms: data(result.data)
+          rooms: result.data,
+          tree: data(result.data)
+        })
+      }
+    })
+    .finally(dispatch(stopLoading()))
+}
+
+export const getCurrentRoom = () => (dispatch, getState) {
+  dispatch(startLoading())
+  const token = getToken(getState())
+  $fetchCurrentRoom(token)
+    .then(result => {
+      if (result) {
+        dispatch({
+          type: ActionTypes.FETCH_CURRENT_ROOMS,
+          currentRoom: result.data,
         })
       }
     })
