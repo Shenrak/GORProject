@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "^5.12.1",
     "history": "^4.7.2",
     "material-ui": "^0.20.0",
     "node-sass-chokidar": "^1.2.2",

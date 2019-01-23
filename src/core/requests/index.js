@@ -16,7 +16,7 @@ export const $signIn = form => {
   }).then(res => transform(res, "json"))
 }
 
-export const $getRooms = token => {
+export const $fetchRooms = token => {
   const myHeaders = new Headers()
   myHeaders.append("Content-Type", "application/json")
   myHeaders.append("Authorization", "Bearer " + token)

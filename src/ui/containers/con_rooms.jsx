@@ -1,15 +1,14 @@
 import { connect } from "react-redux"
 import Rooms from "../views/viw_rooms"
 
-import { getRooms } from "../../core/actions"
-import { data } from "../../utils/tree"
+import { getRoomsTree } from "../../core/actions"
 
 const mapStateToProps = state => ({
-  data: data(state.rooms),
+  data: state.rooms,
   token: state.context.token,
 })
 const mapDispatchToProps = {
-  getRooms
+  getRoomsTree
 }
 
 export default connect(

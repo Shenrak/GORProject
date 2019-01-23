@@ -1,9 +1,9 @@
 import { combineReducers } from "redux"
-import * as actionTypes from "../actions/act_types"
+import { ActionTypes } from "../actions/act_types"
 
 const connected = (state = false, action) => {
   switch (action.type) {
-    case actionTypes.CONNECT:
+    case ActionTypes.CONNECT:
       return true
     default:
       return state
@@ -12,7 +12,7 @@ const connected = (state = false, action) => {
 
 const token = (state = "", action) => {
   switch (action.type) {
-    case actionTypes.CONNECT:
+    case ActionTypes.CONNECT:
       return action.token
     default:
       return state
@@ -21,7 +21,7 @@ const token = (state = "", action) => {
 
 const login = (state = "", action) => {
   switch (action.type) {
-    case actionTypes.CONNECT:
+    case ActionTypes.CONNECT:
       return action.login
     default:
       return state

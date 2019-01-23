@@ -5,7 +5,7 @@ import Rooms from "../views/viw_rooms"
 const renderTree = (data, onToggle) => {
   return data.map(room => (
     <List.Item>
-      <List.Icon name="chevron right" />
+      <List.Icon name={room.children ? "chevron right" : ""} />
       <List.Content>
         <section
           onClick={onToggle}

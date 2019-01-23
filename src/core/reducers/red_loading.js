@@ -1,13 +1,13 @@
 import { vocabulary } from "../../utils"
 import { combineReducers } from "redux"
-import * as actionTypes from "../actions/act_types"
+import { ActionTypes } from "../actions/act_types"
 
 const isLoading = (state = false, action) => {
   switch (action.type) {
-    case actionTypes.START_LOADING:
+    case ActionTypes.START_LOADING:
       return true
 
-    case actionTypes.STOP_LOADING:
+    case ActionTypes.STOP_LOADING:
       return false
 
     default:
@@ -17,10 +17,10 @@ const isLoading = (state = false, action) => {
 
 const message = (state = null, action) => {
   switch (action.type) {
-    case actionTypes.START_LOADING:
+    case ActionTypes.START_LOADING:
       return action.message || vocabulary.global.loadingGeneric
 
-    case actionTypes.STOP_LOADING:
+    case ActionTypes.STOP_LOADING:
       return null
 
     default:

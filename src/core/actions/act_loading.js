@@ -1,10 +1,10 @@
-import * as actionTypes from "./act_types"
+import { ActionTypes } from "../actions/act_types"
 
 export const startLoading = (message = "") => ({
   message,
-  type: actionTypes.START_LOADING
+  type: ActionTypes.START_LOADING
 })
 
 export const stopLoading = () => ({
-  type: actionTypes.STOP_LOADING
+  type: ActionTypes.STOP_LOADING
 })

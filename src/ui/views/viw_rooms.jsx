@@ -13,14 +13,14 @@ class Rooms extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getRooms(this.props.token)
+    this.props.getRoomsTree(this.props.token)
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     return true
   }
 
-  handleClick = event => {
+  handleClick(event) {
     event.preventDefault()
     console.log("clicked")
   }

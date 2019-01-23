@@ -1,5 +1,21 @@
-import { ActionTypes } from ".."
-import { ITreeNode } from "../../../utils/tree/interfaces"
+import { ActionTypes } from "."
+import { startLoading, stopLoading } from "./act_loading"
+import { data } from "../../utils/tree"
+import { $fetchRooms } from "../requests"
+
+export const getRoomsTree = token => dispatch => {
+  dispatch(startLoading())
+  $fetchRooms(token)
+    .then(result => {
+      if (result) {
+        dispatch({
+          type: ActionTypes.FETCH_ROOMS,
+          rooms: data(result.data)
+        })
+      }
+    })
+    .finally(dispatch(stopLoading()))
+}
 
 export const loadTreeData = (data, treeName) => ({
   data,

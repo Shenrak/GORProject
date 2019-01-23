@@ -1,11 +1,8 @@
-import * as actionTypes from "../actions/act_types"
+import { ActionTypes } from "../actions/act_types"
 
-const characters = (
-  state = {},
-  action
-) => {
+const characters = (state = {}, action) => {
   switch (action.type) {
-    case actionTypes.ADD_CHARACTERS:
+    case ActionTypes.ADD_CHARACTERS:
       return action.characters.entities.characters || state
     default:
       return state
@@ -14,7 +11,7 @@ const characters = (
 
 const ids = (state = [], action) => {
   switch (action.type) {
-    case actionTypes.ADD_CHARACTERS:
+    case ActionTypes.ADD_CHARACTERS:
       return action.characters.result
     default:
       return state
