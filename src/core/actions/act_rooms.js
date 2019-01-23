@@ -1,7 +1,7 @@
 import { ActionTypes } from "."
 import { startLoading, stopLoading } from "./act_loading"
 import { data } from "../../utils/tree"
-import { $fetchRooms } from "../requests"
+import { $fetchRooms, $fetchCurrentRoom } from "../requests"
 import { getToken } from "../reducers"
 
 export const getRoomsTree = () => (dispatch, getState) => {
@@ -20,7 +20,7 @@ export const getRoomsTree = () => (dispatch, getState) => {
     .finally(dispatch(stopLoading()))
 }
 
-export const getCurrentRoom = () => (dispatch, getState) {
+export const getCurrentRoom = () => (dispatch, getState) => {
   dispatch(startLoading())
   const token = getToken(getState())
   $fetchCurrentRoom(token)
@@ -28,7 +28,7 @@ export const getCurrentRoom = () => (dispatch, getState) {
       if (result) {
         dispatch({
           type: ActionTypes.FETCH_CURRENT_ROOMS,
-          currentRoom: result.data,
+          currentRoom: result.data
         })
       }
     })
