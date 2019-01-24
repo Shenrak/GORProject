@@ -4,7 +4,7 @@ import { Segment, List, Popup, Label } from "semantic-ui-react"
 const Character = props => (
   <Segment raised className="characters">
     {Object.keys(props.characters).map(i => (
-      <div raised className="character">
+      <div raised className="character" key={i}>
         <h2 className="character-header">{props.characters[i].name}</h2>
         <div className="character-attributes">
           <Segment className="character-stats">

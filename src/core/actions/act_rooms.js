@@ -1,7 +1,7 @@
 import { ActionTypes } from "."
 import { startLoading, stopLoading } from "./act_loading"
 import { data } from "../../utils/tree"
-import { $fetchRooms, $fetchCurrentRoom } from "../requests"
+import { $fetchRooms, $fetchCurrentRoom, $joinRoom } from "../requests"
 import { getToken } from "../reducers"
 
 export const getRoomsTree = () => (dispatch, getState) => {
@@ -30,6 +30,22 @@ export const getCurrentRoom = () => (dispatch, getState) => {
           type: ActionTypes.FETCH_CURRENT_ROOMS,
           currentRoom: result.data
         })
+      }
+    })
+    .finally(dispatch(stopLoading()))
+}
+
+export const joinRoom = (roomId) => (dispatch, getState) => {
+  dispatch(startLoading())
+  const token = getToken(getState())
+  $joinRoom(token, roomId)
+    .then(result => {
+      if (result) {
+        console.log(result)
+        // dispatch({
+        //   type: ActionTypes.FETCH_CURRENT_ROOMS,
+        //   currentRoom: result.data
+        // })
       }
     })
     .finally(dispatch(stopLoading()))

@@ -20,9 +20,9 @@ class Rooms extends React.Component {
     return true
   }
 
-  handleClick(event) {
-    event.preventDefault()
+  handleClick = (roomId) => {
     console.log("clicked")
+    this.props.joinRoom(roomId)
   }
 
   onToggle(node, toggled) {
